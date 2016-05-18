@@ -1,0 +1,10 @@
+<div class="form-group">
+    <label class="col-lg-2 control-label">Radios</label>
+    <div class="col-lg-10">
+        <div class="radio" ng-repeat="option in $ctrl.radioOptions">
+            <label>
+                <input type="radio" name="optionsRadios" ng-change="$ctrl.onChange()" ng-model="$ctrl.selectedRadioOption" value="{{option.value}}"> {{option.description}}
+            </label>
+        </div>
+    </div>
+</div>

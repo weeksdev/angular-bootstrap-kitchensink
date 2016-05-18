@@ -1,0 +1,8 @@
+<div class="form-group">
+    <label class="col-lg-2 control-label">Pick A Beatle Member:</label>
+    <div class="col-lg-10">
+        <input type="text" ng-model-options="{debounce: { 'default': 200, 'blur': 0 } }" ng-model="$ctrl.selectedBeatle" placeholder="Search Beatles Members..."
+        uib-typeahead="i.firstName + ' ' + i.lastName for i in $ctrl.searchBeatles($viewValue)" typeahead-no-results="noResults"
+        typeahead-on-select="$ctrl.onChange($item, $model, $label, $event)" class="form-control">
+    </div>
+</div>

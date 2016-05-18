@@ -1,0 +1,23 @@
+<div class="row" id="basic-table">
+    <div class="col-md-10">
+        <h2>Typeahead</h2>
+    </div>
+    <div class="col-md-2">
+        <h2><i class="fa fa-code hover-pointer" aria-hidden="true" ng-click="$ctrl.showCode()"></i></h2>
+    </div>
+    <div class="col-md-12">
+        <p>Full documentation regarding the typeahead input is available on <a href="https://angular-ui.github.io/bootstrap/#/typeahead">UI Bootstrap</a></p>
+        <br/>
+        <br/>
+    </div>
+    <div class="col-md-12">
+        <div class="form-group">
+            <label class="col-lg-2 control-label">Pick A Beatle Member:</label>
+            <div class="col-lg-10">
+                <input type="text" ng-model-options="{debounce: { 'default': 200, 'blur': 0 } }" ng-model="$ctrl.selectedBeatle"
+                placeholder="Search Beatles Members..." uib-typeahead="i.firstName + ' ' + i.lastName for i in $ctrl.searchBeatles($viewValue)" typeahead-no-results="noResults"
+                typeahead-on-select="$ctrl.onChange($item, $model, $label, $event)" class="form-control">
+            </div>
+        </div>
+    </div>
+</div>

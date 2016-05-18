@@ -1,0 +1,20 @@
+<table class="table table-striped table-hover ">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Instrument</th>
+            <th>Picture</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="record in $ctrl.records">
+            <td>{{record.firstName}}</td>
+            <td>{{record.lastName}}</td>
+            <td>{{record.instrument}}</td>
+            <td><img src="{{record.imgSrc}}" width="50" height="50" /></td>
+            <td><h5><i class="fa fa-pencil hover-pointer" aria-hidden="true" ng-click="$ctrl.editRecord(record)"></i></h5></td>
+        </tr>
+    </tbody>
+</table>

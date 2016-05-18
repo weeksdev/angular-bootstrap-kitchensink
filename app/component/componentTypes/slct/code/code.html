@@ -1,0 +1,6 @@
+<div class="form-group">
+    <label class="col-lg-2 control-label">Select:</label>
+    <div class="col-lg-10">
+        <select class="form-control" id="select" ng-model="$ctrl.selectedOption" ng-change="$ctrl.onChange()" ng-options="i.id as i.name for i in $ctrl.selectOptions"></select>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="row" id="basic-table">
+    <div class="col-md-10">
+        <h2>Select</h2>
+    </div>
+    <div class="col-md-2">
+        <h2><i class="fa fa-code hover-pointer" aria-hidden="true" ng-click="$ctrl.showCode()"></i></h2>
+    </div>
+    <div class="col-md-12">
+        <p>Full documentation regarding the select is available on <a href="http://bootswatch.com/paper/#forms">bootswatch</a></p>
+        <p>If you need a muti-select option simply add <code>multiple=""</code> to your <code>select</code> element.
+        <br/>
+        <br/>
+    </div>
+    <div class="col-md-12">
+        <div class="form-group">
+            <label class="col-lg-2 control-label">Select:</label>
+            <div class="col-lg-5">
+                <select class="form-control" id="select" ng-model="$ctrl.selectedOption" ng-change="$ctrl.onChange()" ng-options="i.id as i.name for i in $ctrl.selectOptions"></select>
+            </div>
+        </div>
+    </div>
+</div>
