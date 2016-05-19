@@ -18,6 +18,8 @@ angular.module('app',['ngComponentRouter','ui.bootstrap'])
         { path: '/typeahead', name: 'Typeahead', component: 'typeahead' },
         { path: '/timepicker', name: 'Timepicker', component: 'timepicker' },
         { path: '/table-with-search', name: 'BasicTableWithSearch', component: 'basicTableWithSearch' },
+        { path: 'chart/line-chart', name: 'LineChart', component: 'lineChart' },
+        { path: 'chart/bar-chart', name: 'BarChart', component: 'barChart' },
     ],
     controller: function($http){
         var ctrl = this;

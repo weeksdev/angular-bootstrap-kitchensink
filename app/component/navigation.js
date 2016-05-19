@@ -42,6 +42,12 @@ angular.module('app').component('navigation',{
        },{
            href: '#/timepicker',
            name: 'Timepicker'
+       },{
+           href: '#/chart/line-chart',
+           name: 'Line Chart'
+       },{
+           href: '#/chart/bar-chart',
+           name: 'Bar Chart'
        }];
        ctrl.components = $filter('orderBy')(ctrl.components, 'name');
    } 
