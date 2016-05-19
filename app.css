@@ -13,3 +13,6 @@ body{
 .modal-code{
     height: 400px;
 }
+.navbar-nav>li>a.gitHub-nav{
+    padding-top: 10.5px;
+}
