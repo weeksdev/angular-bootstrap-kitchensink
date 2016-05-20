@@ -51,6 +51,12 @@ angular.module('app').component('navigation',{
        },{
            href: '#/modal',
            name: 'Modal'
+       },{
+           href: '#/file-input',
+           name: 'File Input'
+       },{
+           href: '#/slider',
+           name: 'Slider'
        }];
        ctrl.components = $filter('orderBy')(ctrl.components, 'name');
    } 

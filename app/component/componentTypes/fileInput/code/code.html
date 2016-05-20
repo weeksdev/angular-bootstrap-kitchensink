@@ -1,0 +1,37 @@
+<style type="text/css">
+    .btn-file {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .btn-file input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 100px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        outline: none;
+        background: white;
+        cursor: inherit;
+        display: block;
+    }
+    
+    .btn-file-label {
+        display: inline-block;
+        width: 400px;
+        margin-left: 10px;
+    }
+</style>
+<div class="form-group">
+    <div class="col-lg-12">
+        <label class="btn btn-default btn-file">
+            Browse
+            <input type="file" style="display: none;" onchange="angular.element(this).scope().$ctrl.fileChanged(this)">
+        </label>
+        <input type="text" class="form-control btn-file-label" value="{{$ctrl.selectedFile}}" readonly/>
+    </div>
+</div>
