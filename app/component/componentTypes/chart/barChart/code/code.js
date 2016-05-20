@@ -37,7 +37,7 @@ angular.module('app').component('componentName', {
             ctrl.chart.data = ctrl.data;
             ctrl.chart.update();
         }
-        var ctx = document.getElementById('line-chart');
+        var ctx = document.getElementById('bar-chart');
         ctrl.chart = new Chart(ctx, {
             type: 'line',
             data: ctrl.data
