@@ -48,6 +48,9 @@ angular.module('app').component('navigation',{
        },{
            href: '#/chart/bar-chart',
            name: 'Bar Chart'
+       },{
+           href: '#/modal',
+           name: 'Modal'
        }];
        ctrl.components = $filter('orderBy')(ctrl.components, 'name');
    } 

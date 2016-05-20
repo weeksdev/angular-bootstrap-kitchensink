@@ -20,6 +20,7 @@ angular.module('app',['ngComponentRouter','ui.bootstrap'])
         { path: '/table-with-search', name: 'BasicTableWithSearch', component: 'basicTableWithSearch' },
         { path: 'chart/line-chart', name: 'LineChart', component: 'lineChart' },
         { path: 'chart/bar-chart', name: 'BarChart', component: 'barChart' },
+        { path: 'modal', name: 'Modal', component: 'modal' }
     ],
     controller: function($http){
         var ctrl = this;
