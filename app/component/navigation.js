@@ -63,6 +63,12 @@ angular.module('app').component('navigation',{
        },{
            href: '#/alert',
            name: 'Alert'
+       },{
+           href: '#/datepicker',
+           name: 'Datepicker'
+       },{
+           href: '#/datepicker-popup',
+           name: 'Datepicker Popup'
        }];
        ctrl.components = $filter('orderBy')(ctrl.components, 'name');
    } 
