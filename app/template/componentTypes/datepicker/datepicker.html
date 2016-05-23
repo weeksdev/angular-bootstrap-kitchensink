@@ -1,0 +1,18 @@
+<div class="row" id="basic-table">
+    <div class="col-md-10">
+        <h2>DatePicker</h2>
+    </div>
+    <div class="col-md-2">
+        <h2><i class="fa fa-code hover-pointer" aria-hidden="true" ng-click="$ctrl.showCode()"></i></h2>
+    </div>
+    <div class="col-md-10">
+        <p>Full documentation regarding datepicker is available on <a href="https://angular-ui.github.io/bootstrap/#/datepicker">UI Bootstrap</a></p>
+    </div>
+    <br/>
+    <br/>
+    <div class="col-md-12">
+        <div style="display:inline-block; min-height:290px;">
+            <uib-datepicker ng-model="$ctrl.dateValue" class="well well-sm" ng-change="$ctrl.onChange()"></uib-datepicker>
+        </div>
+    </div>
+</div>

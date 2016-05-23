@@ -25,6 +25,8 @@ angular.module('app',['ngComponentRouter','ui.bootstrap','rzModule'])
         { path: '/slider', name: 'Slider', component: 'slider' },
         { path: '/accordian', name: 'Accordian', component: 'accordian' },
         { path: '/alert', name: 'Alert', component: 'alert' },
+        { path: '/datepicker', name: 'DatePicker', component: 'datepicker' },
+        { path: '/datepicker-popup', name: 'DatePicker Popup', component: 'datepickerPopup' },
     ],
     controller: function($http){
         var ctrl = this;

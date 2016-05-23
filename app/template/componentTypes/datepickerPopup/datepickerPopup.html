@@ -1,0 +1,26 @@
+<div class="row" id="basic-table">
+    <div class="col-md-10">
+        <h2>DatePicker Popup</h2>
+    </div>
+    <div class="col-md-2">
+        <h2><i class="fa fa-code hover-pointer" aria-hidden="true" ng-click="$ctrl.showCode()"></i></h2>
+    </div>
+    <div class="col-md-10">
+        <p>Full documentation regarding datepicker popup is available on <a href="https://angular-ui.github.io/bootstrap/#/datepickerPopup">UI Bootstrap</a></p>
+    </div>
+    <br/>
+    <br/>
+    <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-4">
+                <p class="input-group">
+                    <input type="text" uib-datepicker-popup="yyyy-MM-dd" class="form-control" ng-model="$ctrl.dateValue" is-open="$ctrl.datepicker.opened"
+                    close-text="Close" />
+                    <span class="input-group-btn">
+            <button type="button" class="btn btn-default" ng-click="$ctrl.showDatepicker()"><i class="glyphicon glyphicon-calendar"></i></button>
+    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
