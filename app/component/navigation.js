@@ -57,6 +57,12 @@ angular.module('app').component('navigation',{
        },{
            href: '#/slider',
            name: 'Slider'
+       },{
+           href: '#/accordian',
+           name: 'Accordian'
+       },{
+           href: '#/alert',
+           name: 'Alert'
        }];
        ctrl.components = $filter('orderBy')(ctrl.components, 'name');
    } 

@@ -23,6 +23,8 @@ angular.module('app',['ngComponentRouter','ui.bootstrap','rzModule'])
         { path: '/modal', name: 'Modal', component: 'modal' },
         { path: '/file-input', name: 'FileInput', component: 'fileInput' },
         { path: '/slider', name: 'Slider', component: 'slider' },
+        { path: '/accordian', name: 'Accordian', component: 'accordian' },
+        { path: '/alert', name: 'Alert', component: 'alert' },
     ],
     controller: function($http){
         var ctrl = this;

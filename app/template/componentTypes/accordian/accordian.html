@@ -1,0 +1,26 @@
+<div class="row" id="basic-table">
+    <div class="col-md-10">
+        <h2>Accordian</h2>
+    </div>
+    <div class="col-md-2">
+        <h2><i class="fa fa-code hover-pointer" aria-hidden="true" ng-click="$ctrl.showCode()"></i></h2>
+    </div>
+    <div class="col-md-12">
+        <p>Full documentation regarding accordians is available on <a href="https://angular-ui.github.io/bootstrap/#/accordion">UI Bootstrap</a></p>
+        <br/>
+        <br/>
+    </div>
+    <div class="col-md-12">
+        <uib-accordion close-others="true">
+            <uib-accordion-group heading="Tab 1" is-open="true" is-disabled="false">
+                Tab 1
+            </uib-accordion-group>
+            <uib-accordion-group heading="Tab 2">
+                Tab 2
+            </uib-accordion-group>
+            <uib-accordion-group heading="Tab 3" is-disabled="true">
+                Tab 2
+            </uib-accordion-group>
+        </uib-accordion>
+    </div>
+</div>

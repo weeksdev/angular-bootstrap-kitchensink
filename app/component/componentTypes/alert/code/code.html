@@ -1,0 +1,10 @@
+<style type="text/css">
+.alert.alert.alert-danger.alert-dismissible.floating {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    width: 300px;
+}
+</style>
+<uib-alert ng-if='$ctrl.alert' type="{{$ctrl.alert.alertType}}" class="{{$ctrl.floatingClass}}" close="$ctrl.closeAlert()">{{$ctrl.alert.alertMessage}}</uib-alert>

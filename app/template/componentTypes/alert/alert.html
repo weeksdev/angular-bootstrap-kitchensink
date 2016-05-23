@@ -1,0 +1,28 @@
+<style type="text/css">
+.alert.alert.alert-danger.alert-dismissible.floating {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1000;
+    width: 300px;
+}
+</style>
+<div class="row" id="basic-table">
+    <div class="col-md-10">
+        <h2>Alert</h2>
+    </div>
+    <div class="col-md-2">
+        <h2><i class="fa fa-code hover-pointer" aria-hidden="true" ng-click="$ctrl.showCode()"></i></h2>
+    </div>
+    <div class="col-md-10">
+        <p>Full documentation regarding alerts is available on <a href="https://angular-ui.github.io/bootstrap/#/alert">UI Bootstrap</a></p>
+    </div>
+    <div class="col-md-2">
+        <input type="checkbox" ng-model="$ctrl.floating" ng-change="$ctrl.onChange()"> Floating
+    </div>
+    <br/>
+    <br/>
+    <div class="col-md-12">
+        <uib-alert ng-if='$ctrl.alert' type="{{$ctrl.alert.alertType}}" class="{{$ctrl.floatingClass}}" close="$ctrl.closeAlert()">{{$ctrl.alert.alertMessage}}</uib-alert>
+    </div>
+</div>
