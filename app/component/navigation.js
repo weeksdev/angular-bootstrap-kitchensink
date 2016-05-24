@@ -72,6 +72,9 @@ angular.module('app').component('navigation',{
        },{
            href: '#/tree',
            name: 'Tree'
+       },{
+           href: '#/tree-with-selection',
+           name: 'Tree w Selection'
        }];
        ctrl.components = $filter('orderBy')(ctrl.components, 'name');
    } 

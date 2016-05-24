@@ -28,6 +28,7 @@ angular.module('app',['ngComponentRouter','ui.bootstrap','rzModule'])
         { path: '/datepicker', name: 'DatePicker', component: 'datepicker' },
         { path: '/datepicker-popup', name: 'DatePicker Popup', component: 'datepickerPopup' },
         { path: '/tree', name: 'Tree', component: 'tree' },
+        { path: '/tree-with-selection', name: 'TreeWithSelection', component: 'treeWithSelection' },
     ],
     controller: function($http){
         var ctrl = this;
