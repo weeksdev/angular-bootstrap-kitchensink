@@ -1,0 +1,21 @@
+<style type="text/css">
+li.tree-item{
+    list-style-type: none;
+}
+.clickable{
+    cursor: pointer;
+    width:20px;
+}
+.hide{
+    display: hidden;
+}
+</style>
+<script type="text/ng-template"  id="tree_item_renderer.html">
+    <i ng-click="$ctrl.toggle(data)" class="fa clickable {{(data.nodes.length > 0 && !data.closed)? 'fa-arrow-down' : ''}} {{(data.nodes.length > 0 && data.closed)? 'fa-arrow-right' : ''}}"  aria-hidden="true"></i>
+    <i class="fa {{$ctrl.getIcon(data)}}"></i>
+    {{data.name}}
+    <ul class="{{data.closed == true ? 'hide' : ''}}">        
+        <li class="tree-item" ng-repeat="data in data.nodes" ng-include="'tree_item_renderer.html'"></li>
+    </ul>
+</script>
+<li class="tree-item" ng-repeat="data in $ctrl.tree" ng-include="'tree_item_renderer.html'"></li>
