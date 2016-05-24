@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label class="col-lg-2 control-label">Search Components:</label>
+            <div class="col-lg-10">
+                <input type="text" ng-model-options="{debounce: { 'default': 200, 'blur': 0 } }" ng-model="$ctrl.searchValue" ng-change="$ctrl.search($ctrl.searchValue)"
+                />
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <ul class="list-group">
+            <li ng-repeat="comp in $ctrl.results" class="list-group-item">
+                <a href={{comp.href}}>{{comp.name}}</a>
+            </li>
+        </ul>
+    </div>
+</div>
