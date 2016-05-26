@@ -1,0 +1,20 @@
+<div class="row" id="basic-table">
+    <div class="col-md-10">
+        <h2>Tabs</h2>
+    </div>
+    <div class="col-md-2">
+        <h2><i class="fa fa-code hover-pointer" aria-hidden="true" ng-click="$ctrl.showCode()"></i></h2>
+    </div>
+    <div class="col-md-12">
+        <p>Full documentation regarding the tabs directive is available on <a href="https://angular-ui.github.io/bootstrap/#/tabs">UI Bootstrap</a></p>
+        <br/>
+        <br/>
+    </div>
+    <div class="col-md-12">
+        <uib-tabset active="active">
+            <uib-tab index="$index" ng-repeat="tab in $ctrl.tabs" heading="{{tab.header}}" disable="tab.disabled">
+                {{tab.content}}
+            </uib-tab>
+        </uib-tabset>
+    </div>
+</div>

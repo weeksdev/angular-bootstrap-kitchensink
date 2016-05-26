@@ -81,6 +81,10 @@ angular.module('app').factory('componentTypesFactory', function () {
                 }, {
                     href: '#/tree-with-selection',
                     name: 'Tree w Selection'
+                },{
+                    href: '#/tabs',
+                    name: 'Tabs',
+                    alias: 'tab'
                 }];
         }
     };
