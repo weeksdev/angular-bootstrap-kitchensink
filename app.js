@@ -29,7 +29,8 @@ angular.module('app',['ngComponentRouter','ui.bootstrap','rzModule'])
         { path: '/datepicker-popup', name: 'DatePicker Popup', component: 'datepickerPopup' },
         { path: '/tree', name: 'Tree', component: 'tree' },
         { path: '/tree-with-selection', name: 'TreeWithSelection', component: 'treeWithSelection' },
-        { path: '/tabs', name: 'Tabs', component: 'tabs' }
+        { path: '/tabs', name: 'Tabs', component: 'tabs' },
+        { path: '/advanced-table', name: 'AdvancedTable', component: 'advancedTable' }
     ],
     controller: function($http){
         var ctrl = this;

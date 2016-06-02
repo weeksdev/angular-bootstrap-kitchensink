@@ -85,6 +85,10 @@ angular.module('app').factory('componentTypesFactory', function () {
                     href: '#/tabs',
                     name: 'Tabs',
                     alias: 'tab'
+                },{
+                    href: '#/advanced-table',
+                    name: 'Advanced Table',
+                    alias: 'table, grid'
                 }];
         }
     };
