@@ -1,0 +1,76 @@
+﻿<script type="text/ng-template" id="/beatle-mentions.tpl">
+    <ul class="list-group user-search">
+        <li mentio-menu-item="beatle" ng-repeat="beatle in items" class="list-group-item">
+            <img ng-src="{{beatle.imgSrc}}" class="user-photo">
+            <span class="text-secondary" ng-bind-html="beatle.firstName + ' '+ beatle.lastName | mentioHighlight:typedTerm:'menu-highlighted' | unsafe"></span>
+            <em class="text-muted" ng-bind="beatle.instrument"></em>
+        </li>
+    </ul>
+</script>
+
+<div class="row" id="mention">
+    <div class="col-md-10">
+        <h2>Mention</h2>
+    </div>
+    <div class="col-md-2">
+        <h2><i class="fa fa-code hover-pointer" aria-hidden="true" ng-click="$ctrl.showCode()"></i></h2>
+    </div>
+    <div class="col-md-12">
+        <p>Make sure you add a script tag reference to <code>https://cdn.jsdelivr.net/angular.ment-io/0.9.24/mentio.min.js</code></p>
+        <p>Full documentation regarding mentions is available on <a href="https://github.com/jeff-collins/ment.io">ment.io</a></p>
+
+        <br />
+    </div>
+    <div class="col-md-12">
+        <div class="form-group">
+            <h4>Use the @ sign to <b>mention</b> a member of The Beatles:</h4>
+            <div contenteditable="true" mentio
+                 mentio-typed-term="typedTerm"
+                 class="editor form-control"
+                 mentio-id="'htmlContent'"
+                 id="htmlContent"
+                 ng-model="htmlContent">
+            </div>
+            <span class="caption small">Mentioned: {{typedTerm}}</span>
+        </div>
+
+        <mentio-menu mentio-for="'htmlContent'"
+                     mentio-trigger-char="'@'"
+                     mentio-items="$ctrl.beatles"
+                     mentio-template-url="/beatle-mentions.tpl"
+                     mentio-search="$ctrl.searchBeatles(term)"
+                     mentio-select="$ctrl.getBeatleText(item)"></mentio-menu>
+    </div>
+    <div class="col-md-12">
+        <p>
+            Please note to get <em>contenteditable</em> to work you must add the following directive <pre><code>.directive('contenteditable', ['$sce', function ($sce) {
+    return {
+        restrict: 'A', // only activate on element attribute
+        require: '?ngModel', // get a hold of NgModelController
+        link: function (scope, element, attrs, ngModel) {
+            if (!ngModel) return; // do nothing if no ng-model
+            // Specify how UI should be updated
+            ngModel.$render = function () {
+                element.html($sce.getTrustedHtml(ngModel.$viewValue || ''));
+            };
+            // Listen for change events to enable binding
+            element.on('blur keyup change', function () {
+                scope.$evalAsync(read);
+            });
+            read(); // initialize
+            // Write data to the model
+            function read() {
+                var html = element.html();
+                // When we clear the content editable the browser leaves a <br> behind
+                // If strip-br attribute is provided then we strip this out
+                if (attrs.stripBr && html == '<br>') {
+                    html = '';
+                }
+                ngModel.$setViewValue(html);
+            }
+        }
+    };
+}]);</code></pre>
+        </p>
+    </div>
+</div>
