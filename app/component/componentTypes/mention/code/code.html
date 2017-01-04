@@ -1,0 +1,30 @@
+﻿<script type="text/ng-template" id="/beatle-mentions.tpl">
+    <ul class="list-group user-search">
+        <li mentio-menu-item="beatle" ng-repeat="beatle in items" class="list-group-item">
+            <img ng-src="{{beatle.imgSrc}}" class="user-photo">
+            <span class="text-secondary" ng-bind-html="beatle.firstName + ' '+ beatle.lastName | mentioHighlight:typedTerm:'menu-highlighted' | unsafe"></span>
+            <em class="text-muted" ng-bind="beatle.instrument"></em>
+        </li>
+    </ul>
+</script>
+
+<div class="col-md-12">
+    <div class="form-group">
+        <h3>Content Editable:</h3>
+        <div contenteditable="true" mentio
+             mentio-typed-term="typedTerm"
+             class="editor form-control"
+             mentio-id="'htmlContent'"
+             id="htmlContent"
+             ng-model="htmlContent">
+        </div>
+        <span class="caption small">Mentioned: {{typedTerm}}</span>
+    </div>
+
+    <mentio-menu mentio-for="'htmlContent'"
+                 mentio-trigger-char="'@'"
+                 mentio-items="$ctrl.beatles"
+                 mentio-template-url="/beatle-mentions.tpl"
+                 mentio-search="$ctrl.searchBeatles(term)"
+                 mentio-select="$ctrl.getBeatleText(item)"></mentio-menu>
+</div>
