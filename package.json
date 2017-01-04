@@ -22,6 +22,7 @@
     "font-awesome": "^4.6.1",
     "local-web-server": "^1.2.4",
     "ngcomponentrouter": "^2.1.0",
-    "webserver": "^1.1.2"
+    "webserver": "^1.1.2",
+    "ment.io": "^0.9.23"
   }
 }
