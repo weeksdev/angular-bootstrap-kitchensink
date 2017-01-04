@@ -16,3 +16,14 @@ body{
 .navbar-nav>li>a.gitHub-nav{
     padding-top: 10.5px;
 }
+.editor {
+	overflow: auto;
+    min-height: 140px;
+}
+
+.user-search .user-photo {
+    max-width: 30px;
+    max-height: 30px;
+    border-radius: 15px;
+}
+
