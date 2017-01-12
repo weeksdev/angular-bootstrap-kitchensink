@@ -1,0 +1,57 @@
+<!-- This is the table.html file -->
+<table class="table table-striped table-hover ">
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Instrument</th>
+            <th>Picture</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="record in $ctrl.records">
+            <td>{{record.firstName}}</td>
+            <td>{{record.lastName}}</td>
+            <td>{{record.instrument}}</td>
+            <td>
+                <h5><component-name-dialog record="record"></component-name-dialog></i></h5>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+
+<!-- This is the dialog.html file -->>
+<i class="fa fa-pencil hover-pointer" aria-hidden="true" ng-click="$ctrl.openModal()"></i>
+<div class="modal" ng-class="$ctrl.showModal ? 'show' : 'hide'">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Record Info</h3>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <fieldset>
+                        <div class="row">
+                            <label class="col-md-2 control-label">First Name</label>
+                            <div class="col-md-10">
+                                <input class="form-control" type="text" ng-model="$ctrl.record.firstName" />
+                            </div>
+                            <label class="col-md-2 control-label">First Name</label>
+                            <div class="col-md-10">
+                                <input class="form-control" type="text" ng-model="$ctrl.record.lastName" />
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="button" ng-click="$ctrl.save($ctrl.record)">Save</button>
+                <button class="btn btn-warning" type="button" ng-click="$ctrl.hideModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

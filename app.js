@@ -31,7 +31,8 @@ angular.module('app', ['ngComponentRouter', 'ui.bootstrap', 'rzModule', 'mentio'
         { path: '/tree-with-selection', name: 'TreeWithSelection', component: 'treeWithSelection' },
         { path: '/tabs', name: 'Tabs', component: 'tabs' },
         { path: '/advanced-table', name: 'AdvancedTable', component: 'advancedTable' },
-        { path: '/mention', name: 'Mention', component: 'mention' }
+        { path: '/mention', name: 'Mention', component: 'mention' },
+        { path: '/table-with-modal', name: 'TableWithModal', component: 'tableWithModal' }
     ],
     controller: function ($http) {
         var ctrl = this;
