@@ -1,15 +1,19 @@
-<script type="text/html" id="modalContent">
-    <div class="modal-header">
-        <h3 class="modal-title">Hello World</h3>
+<div class="modal" ng-class="$ctrl.showModal ? 'show' : 'hide'">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Hello World</h3>
+            </div>
+            <div class="modal-body">
+                <h4>Are you sure you want to save the record?</h4>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="button" ng-click="$ctrl.hideModal()">OK</button>
+                <button class="btn btn-warning" type="button" ng-click="$ctrl.hideModal()">Cancel</button>
+            </div>
+        </div>
     </div>
-    <div class="modal-body">
-        <h4>Are you sure you want to save the record?</h4>
-    </div>
-    <div class="modal-footer">
-        <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
-        <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
-    </div>
-</script>
+</div>
 <div class="row" id="basic-table">
     <div class="col-md-10">
         <h2>Modal Popup</h2>
@@ -18,7 +22,7 @@
         <h2><i class="fa fa-code hover-pointer" aria-hidden="true" ng-click="$ctrl.showCode()"></i></h2>
     </div>
     <div class="col-md-12">
-        <p>Full documentation regarding modal is available on <a href="https://angular-ui.github.io/bootstrap/#/modal">UI Bootstrap</a></p>
+        <p>Full documentation regarding modal is available on <a href="http://bootswatch.com/paper/#dialogs">Bootswatch</a></p>
         <br/>
         <br/>
     </div>
