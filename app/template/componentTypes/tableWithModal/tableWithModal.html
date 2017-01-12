@@ -1,0 +1,31 @@
+<div class="row" id="bar-chart-info">
+    <div class="col-md-10">
+        <h2>Modal with Dialog</h2>
+    </div>
+    <div class="col-md-2">
+        <h2><i class="fa fa-code hover-pointer" aria-hidden="true" ng-click="$ctrl.showCode()"></i></h2>
+    </div>
+    <div class="col-md-12">
+        <table class="table table-striped table-hover ">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Instrument</th>
+                    <th>Picture</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="record in $ctrl.records">
+                    <td>{{record.firstName}}</td>
+                    <td>{{record.lastName}}</td>
+                    <td>{{record.instrument}}</td>
+                    <td><img src="{{record.imgSrc}}" width="50" height="50" /></td>
+                    <td>
+                        <h5><table-with-modal-modal-dialog record="record"></table-with-modal-modal-dialog></i></h5></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
